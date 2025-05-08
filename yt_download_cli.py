@@ -38,7 +38,7 @@ def get_user_quality():
     }
     return quality_map.get(choice, "720p")  # Default to 720p if invalid choice
 
-url = "https://youtu.be/6h92kCk-bkw?si=5YPaBE9IRyUVOyF0"
+url = ""         # Add yt video link
 
 yt = YouTube(url, on_progress_callback=on_progress)
 print(f"Title: {yt.title}")
