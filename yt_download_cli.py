@@ -71,6 +71,6 @@ if not download_with_retry(audio_stream, "audio.mp4"):
 # audio_clip = AudioFileClip("audio.mp4")
 
 # final_clip = video_clip.with_audio(audio_clip)
-# final_clip.write_videofile("output.mp4", codec="libx264")  # Use h264_nvenc for NVIDIA GPU
+# final_clip.write_videofile("output.mp4", codec="libx264") 
 
 print("Download and merge complete! File saved as 'output.mp4'.")
