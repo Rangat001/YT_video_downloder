@@ -17,7 +17,7 @@ The **YouTube Video Downloader** is a command-line tool that allows you to downl
 
 Before running the tool, ensure you have the following installed:
 
-- **Python 3.x**
+- **Python 3**
 - Required Python libraries:
   - `pytubefix`
   - `moviepy`
