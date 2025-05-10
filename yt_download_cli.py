@@ -38,7 +38,7 @@ def get_user_quality():
     }
     return quality_map.get(choice, "720p")  # Default to 720p if invalid choice
 
-url = ""         # Add yt video link
+url = "https://youtu.be/XO8wew38VM8?si=rIuL7B4F9PxiQnvn"         # Add yt video link
 
 yt = YouTube(url, on_progress_callback=on_progress)
 print(f"Title: {yt.title}")
@@ -66,11 +66,11 @@ if not download_with_retry(audio_stream, "audio.mp4"):
     sys.exit(1)
 
 # Merge video and audio using moviepy
-# print("Merging video and audio...")
-# video_clip = VideoFileClip("video.mp4")
-# audio_clip = AudioFileClip("audio.mp4")
+print("Merging video and audio...")
+video_clip = VideoFileClip("video.mp4")
+audio_clip = AudioFileClip("audio.mp4")
 
-# final_clip = video_clip.with_audio(audio_clip)
-# final_clip.write_videofile("output.mp4", codec="libx264") 
+final_clip = video_clip.with_audio(audio_clip)
+final_clip.write_videofile("output.mp4", codec="libx264") 
 
 print("Download and merge complete! File saved as 'output.mp4'.")
